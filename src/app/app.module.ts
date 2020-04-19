@@ -15,7 +15,7 @@ import { ShowDepComponent } from './department/show-dep/show-dep.component';
 import { EditDepComponent } from './department/edit-dep/edit-dep.component';
 import { AddDepComponent } from './department/add-dep/add-dep.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatInputModule} from '@angular/material/input';
 import { ContactComponent } from './contact/contact.component';
 import { EditCntComponent } from './contact/edit-cnt/edit-cnt.component';
 import { ShowCntComponent} from './contact/show-cnt/show-cnt.component';
@@ -43,6 +43,7 @@ import{EmployeeService} from 'src/app/services/employee.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatInputModule,
     MatTableModule, MatIconModule, MatButtonModule
   
   ],
