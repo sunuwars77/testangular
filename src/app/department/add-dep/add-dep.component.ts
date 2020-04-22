@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialogRef} from '@angular/material/dialog';
+import{ DepartmentService} from 'src/app/services/department.service';
+import{NgForm}   from '@angular/forms';
 @Component({
   selector: 'app-add-dep',
   templateUrl: './add-dep.component.html',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDepComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogbox: MatDialogRef <AddDepComponent>,
+    public service: DepartmentService) { }
 
   ngOnInit(): void {
+    this.resetForm();
+  }
+
+resetForm(form?:NgForm){
+  if(form!=null)
+  form.resetForm();
+  this.service.formData ={
+    DepartmentID:0,
+    DepartmentName:''
   }
 
 }
+
+
+onClose(){
+  this.dialogbox.close();
+}
+onSubmit (form:NgForm){
+  console.log(form.value);
+}
+}
+
