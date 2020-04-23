@@ -11,6 +11,7 @@ import{ MatButtonModule} from '@angular/material/button';
 import {MatSortModule}  from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EmployeComponent } from './employe/employe.component';
 import { ShowEmpComponent } from './employe/show-emp/show-emp.component';
 import { EditEmpComponent } from './employe/edit-emp/edit-emp.component';
@@ -55,11 +56,12 @@ import{EmployeeService} from 'src/app/services/employee.service';
     
     HttpClientModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
   
   ],
   providers: [DepartmentService,EmployeeService],
   bootstrap: [AppComponent],
-  entryComponents: [AddDepComponent]
+  entryComponents: [AddDepComponent,EditDepComponent]
 })
 export class AppModule { }
