@@ -11,7 +11,6 @@ import{ MatButtonModule} from '@angular/material/button';
 import {MatSortModule}  from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule} from '@angular/forms';
-
 import { EmployeComponent } from './employe/employe.component';
 import { ShowEmpComponent } from './employe/show-emp/show-emp.component';
 import { EditEmpComponent } from './employe/edit-emp/edit-emp.component';

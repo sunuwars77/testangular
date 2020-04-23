@@ -24,5 +24,8 @@
         *ngIf="DepartmentName .invalid && DepartmentName .touched">
         please enter Department name
     </div>
+    <button class="mt-4" mat-raised-button
+    color="primary" type="submit"
+    [disabled]="form.invalid">ADD Department</button>
     </form>
 </div>
