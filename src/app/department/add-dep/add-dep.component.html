@@ -17,11 +17,11 @@
             class="form-control"
             name="DepartmentName"
             #DepartmentName="ngModel"
-            [(ngModel)]=" service.formData.DepartmentName">
+            [(ngModel)]="service.formData.DepartmentName">
 
         </div>
         <div class="text-left text-danger"
-        *ngIf="DepartmentName .invalid && DepartmentName .touched">
+        *ngIf="DepartmentName.invalid && DepartmentName.touched">
         please enter Department name
     </div>
     <button class="mt-4" mat-raised-button
