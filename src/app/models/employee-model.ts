@@ -1,5 +1,5 @@
 export class Employee{
-EmpolyeeID:number
+EmployeeID:number
 EmployeeName:string
 Department: string
 MailID: string
