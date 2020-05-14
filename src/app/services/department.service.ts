@@ -22,8 +22,14 @@ formData: Department;
    }
 addDepartment(dep:Department){
   return this.http.post(this. APIUrl +'/Department',dep);
-}
 
+}
+deleteDepartment(id:number){
+  return this.http.delete(this.APIUrl+'/department/'+id);
+}
+updateDepartment(dep:Department) {
+  return this.http.put(this.APIUrl+'/department',dep);
+}
  private  _listeners =new Subject<any>();
  listen(): Observable<any>{
    return this._listeners.asObservable();

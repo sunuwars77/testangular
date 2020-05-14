@@ -8,9 +8,11 @@ import {HttpClientModule} from '@angular/common/http';
 import{MatTableModule} from '@angular/material/table';
 import{ MatIconModule} from '@angular/material/icon';
 import{ MatButtonModule} from '@angular/material/button';
-import {MatSortModule}  from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 import { EmployeComponent } from './employe/employe.component';
 import { ShowEmpComponent } from './employe/show-emp/show-emp.component';
 import { EditEmpComponent } from './employe/edit-emp/edit-emp.component';
@@ -55,11 +57,13 @@ import{EmployeeService} from 'src/app/services/employee.service';
     
     HttpClientModule,
     FormsModule,
-    MatDialogModule
-  
+    MatDialogModule,
+    MatSnackBarModule,
+  MatDatepickerModule,
+  MatNativeDateModule
   ],
   providers: [DepartmentService,EmployeeService],
   bootstrap: [AppComponent],
-  entryComponents: [AddDepComponent]
+  entryComponents: [AddDepComponent,EditDepComponent,AddEmpComponent,EditEmpComponent]
 })
 export class AppModule { }
